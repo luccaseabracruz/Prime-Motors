@@ -1,7 +1,7 @@
 # 🚙 PrimeMotors - Plataforma de anúncio de carros 🚙
 
 🇧🇷
-O Motors Shop é uma plataforma de compra e venda de veículos seminovos, uma página totalmente responsiva, contendo integração entre backend e frontend, dessa forma, a aplicação disponibiliza ao usuário, diversas ações, como:
+O Prime Motors é uma plataforma de compra e venda de veículos seminovos, uma página totalmente responsiva, contendo integração entre backend e frontend, dessa forma, a aplicação disponibiliza ao usuário, diversas ações, como:
 - Cadastro de usuário (anunciante ou cliente);
 - Edição dos dados do usuário;
 - Deleção de um usuário;
@@ -12,31 +12,32 @@ O Motors Shop é uma plataforma de compra e venda de veículos seminovos, uma p�
 - Edição de comentários;
 - Deleção de comentários.
 
-De forma básica, o cliente que irá utilizar o Motors Shop, irá se cadastrar na plataforma, como um usuário vendedor ou um cliente que deseja adquirir um novo veículo. A partir disso, ele poderá navegar na plataforma, que dispõe de diversos filtros funcionais para melhor selecionar veículos de acordo com o desejo do comprador, além disso, existe uma página especifica para cada anúncio publicado na plataforma, onde o cliente consegue registrar um comentário e visualizar maiores informações sobre aquele automóvel em específico. Caso exista um maior interesse, é possível entrar em contato diretamente com o anunciante através do botão "Comprar" na página de detalhes do veículo, isso o redirecionará para o Whatsapp do vendedor. Outra função interessante é a tag em verde que aparece na foto de capa do anúncio, isso significa que o produto foi cadastrado com um valor de no mínimo 5% abaixo da tabela Fipe daquele automóvel, caracterizando assim, um possível bom negócio. No caso do usuário ser um vendedor, ele pode desativar o anúncio através do modal de edição de anúncios, se o mesmo já tiver sido comercializado, dessa forma, o produto não ficará mais disponível no acervo de veículos da plataforma. Por último, implementamos no backend o envio de email para recuperação de senha do usuário, sendo possível alterar o password caso o mesmo tenha esquecido.
+Por meio do Prime Motors, o cliente poderá se cadastrar na plataforma como um usuário vendedor ou um cliente que deseja adquirir um novo veículo. A partir disso, ele poderá navegar na plataforma, que dispõe de diversos filtros funcionais para melhor selecionar veículos de acordo com o desejo do comprador. Existe uma página especifica para cada anúncio publicado na plataforma onde o cliente consegue registrar um comentário e visualizar maiores informações sobre aquele automóvel em específico. Caso exista um maior interesse, é possível entrar em contato diretamente com o anunciante através do botão "Comprar" na página de detalhes do veículo, redirecionando-o para o Whatsapp do vendedor. Outra função interessante é a tag em verde na foto de capa do anúncio indicando que o produto foi cadastrado com um valor de, no mínimo, 5% abaixo da tabela Fipe daquele automóvel, caracterizando um bom negócio. No caso do usuário ser um vendedor, ele pode desativar o anúncio através do modal de edição de anúncios, se o mesmo já tiver sido comercializado. Dessa forma, o produto não ficará mais disponível no acervo de veículos da plataforma. Por último, foi implementado no backend o envio de email para recuperação de senha do usuário, sendo possível alterar o password caso o mesmo tenha esquecido.
 
-🇺🇸
-Motor Shop is a site where you can buy-sell semi-new vehicles, it is responsiveness, with full backend/frontend integration, can be used with your desktop computer or smartphone/tablet. 
 
-With Motor Shop you can:
-- Register (seller or buyer);
-- Edit your own infos;
-- Create, Edit and Delete a listed vehicle;
-- Create comments;
-- Edit comments;
-- Delete comments;
 
-Basically, to use Motor Shop you need to register her/himself - and choose between seller or client - so then you can use the entire site, use filters, visit especific car page, see more pictures and details, also see the comments made by other users about the car.
-If you - the user - notice a green flag with the simbol '$' it means that the price is 5% less than the normal/oficial price what it means that is a 'good deal'. Cool isn't?
-If you are in the detailed car page, you can click "comprar" button and automatically be redirected to seller's whatsapp.
+Prime Motors is a platform for buying and selling used vehicles, a fully responsive page, with integration between backend and frontend, so the application provides the user with various actions, such as:
 
-Being a seller you can activate and deactivate your vehicles ads and they will not appear in the main page, just you will see it and, of course, can reactive it again, using the "edit" option.
+- User registration (advertiser or customer);
+- Editing user data;
+- Deleting a user;
+- Creating an advertisement;
+- Editing ad data;
+- Deleting an ad;
+- Posting comments within a published ad;
+- Editing comments;
+- Deleting comments.
 
-If you forgot your password, you can recover it too and an email will be sent to you, so you can recover you access and continue enjoying our platform.
+Through Prime Motors, the customer can register on the platform as a sales user or a customer wishing to purchase a new vehicle. From there, they can browse the platform, which has several functional filters to better select vehicles according to the buyer's wishes. There is a specific page for each ad published on the platform where the customer can register a comment and view more information about that specific car. If you are interested, you can contact the advertiser directly via the "Buy" button on the vehicle details page, redirecting you to the seller's Whatsapp. Another interesting feature is the green tag on the cover photo of the ad indicating that the product has been registered with a value of at least 5% below the Fipe table for that car, characterizing a good deal. If the user is a seller, they can deactivate the ad via the ad editing modal if it has already been sold. This way, the product will no longer be available in the platform's vehicle collection. Lastly, the backend was implemented to send an email to recover the user's password, making it possible to change the password if the user has forgotten it.
+
+As seller you can activate and deactivate your vehicles ads and they will not appear in the main page, just you will see it and, of course, can reactive it again, using the "edit" option.
+
+If you forget your password, you can recover it by sending a password recovery message to your e-mail address. 
 
 ## Instructions
 
 ### Starting frontend
-This project uses node and postgreSQL. So, it is important to check if you already have these programs intalled on your machine.
+This project uses Node.js and postgreSQL. Before proceeding, ensure that you have Node.js and npm installed on your machine.
 
     1. Clone this repository on your machine.
         $ git clone <ssh_key>
