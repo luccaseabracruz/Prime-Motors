@@ -13,7 +13,7 @@ export const StyledMain = styled.main`
     position: relative;
     overflow: hidden;
     color: var(--color-white-fixed);
-    background-image: url('https://images.pexels.com/photos/12960633/pexels-photo-12960633.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-image: url('https://images.pexels.com/photos/3221165/pexels-photo-3221165.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-size: cover;
     background-position: 53% 70%;
     background-repeat: no-repeat;
@@ -39,6 +39,7 @@ export const StyledMain = styled.main`
 
   .welcomeBox h1 {
     margin-bottom: 2rem;
+    font-size: 3rem;
   }
   .welcomeBox p {
     text-align: center;
@@ -129,7 +130,6 @@ export const StyledMain = styled.main`
 
     position: relative;
     min-height: 15rem;
-
   }
 
   /* Pagination */
@@ -203,6 +203,7 @@ export const StyledMain = styled.main`
   @media (min-width: 768px) {
     .welcomeBox {
       height: 30rem;
+      background-image: url('https://images.pexels.com/photos/1179579/pexels-photo-1179579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     }
 
     .listAndFilter {

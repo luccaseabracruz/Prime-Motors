@@ -41,6 +41,10 @@ export const StyledHeader = styled.header<HeaderProps>`
 
   .brandContainer {
     cursor: pointer;
+
+    .logo {
+      color: var(--color-brand-1);
+    }
   }
 
   nav {

@@ -1,4 +1,4 @@
-import Logo from '../../utils/images/logo1.svg';
+// import Logo from '../../utils/images/prime_motors_logo.svg';
 import { FaBars } from 'react-icons/fa';
 import { GrClose } from 'react-icons/gr';
 import { StyledHeader } from './style';
@@ -26,7 +26,8 @@ export const Header = () => {
       <div className='menuContainer'>
         <div className='brandAndButton'>
           <div className='brandContainer' onClick={() => navigate('/')}>
-            <img src={Logo} alt='brand logo' />
+            {/* <img src={Logo} alt='brand logo' /> */}
+            <h1 className='heading-5-600 logo'>Prime Motors</h1>
           </div>
           <button
             onClick={() => {
