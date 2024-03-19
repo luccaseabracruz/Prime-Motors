@@ -20,6 +20,10 @@ export const StyledFooter = styled.footer`
     align-items: center;
   }
 
+  .logo {
+    color: var(--color-brand-4);
+  }
+
   img {
     height: 1.5rem;
   }
