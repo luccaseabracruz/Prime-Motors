@@ -1,4 +1,5 @@
 import { useCar, useModal } from '../../hooks';
+import { StyledListPicture } from './style';
 
 interface IListingPagePictureProps {
   carPhotoUrl: string;
@@ -15,8 +16,8 @@ export const ListingPagePicture = ({
     handleShowModal('carPhoto');
   };
   return (
-    <li onClick={handlePhotoClick}>
+    <StyledListPicture onClick={handlePhotoClick}>
       <img src={carPhotoUrl} alt='foto secundária do carro' />
-    </li>
+    </StyledListPicture>
   );
 };
