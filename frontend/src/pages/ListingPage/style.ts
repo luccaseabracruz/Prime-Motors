@@ -50,8 +50,12 @@ export const StyledMain = styled.main<StyledMainProps>`
 
     .imageContainer {
       max-width: 100%;
-
+      height: 15rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img {
+        height: 100%;
         max-width: 100%;
       }
     }
@@ -149,9 +153,14 @@ export const StyledMain = styled.main<StyledMainProps>`
     li {
       background-color: var(--color-grey-7);
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     li > img {
       max-width: 100%;
+      height: auto;
+      width: auto;
     }
   }
 
@@ -173,7 +182,8 @@ export const StyledMain = styled.main<StyledMainProps>`
 
     .profileDescription {
       color: var(--color-grey-2);
-      text-align: center;
+      text-align: justify;
+      text-justify: inter-word;
       padding: 1rem;
 
       word-wrap: break-word;
@@ -316,6 +326,12 @@ export const StyledMain = styled.main<StyledMainProps>`
       align-items: flex-start;
     }
 
+    .carInfo {
+      .imageContainer {
+        height: 15rem;
+      }
+    }
+
     .photosAndProfileSection {
       gap: 1rem;
       margin-bottom: 0;
@@ -348,6 +364,9 @@ export const StyledMain = styled.main<StyledMainProps>`
 
     .carInfo {
       width: 100%;
+      .imageContainer {
+        height: 25rem;
+      }
     }
     .commentsSection {
       width: 70%;

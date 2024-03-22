@@ -6,7 +6,7 @@ import StyledPaginationComponent from './style';
 
 const PaginationComponent = ({ page }: { page: string }) => {
   const { allCars, setCarPerPage, filteredCars, sellersCars } = useCar();
-  
+
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const perPage: number = 12;
