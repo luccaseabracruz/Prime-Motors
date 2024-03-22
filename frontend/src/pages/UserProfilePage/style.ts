@@ -28,6 +28,8 @@ export const StyledMain = styled.main<ProfileProps>`
       gap: 1rem;
       padding: 2rem;
       background-color: none;
+      border-radius: 0.5rem;
+      box-shadow: 0.1rem 0.15rem 0.3rem 0.05rem var(--color-grey-3);
       button.create-announce-btn {
         color: var(--color-brand-1);
         transition: 0.2s;

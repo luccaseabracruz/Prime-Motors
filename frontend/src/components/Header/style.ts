@@ -6,7 +6,7 @@ interface HeaderProps {
 
 export const StyledHeader = styled.header<HeaderProps>`
   padding: 1.5rem 1rem;
-  box-shadow: 0px 1px 3px var(--grey-5);
+  box-shadow: 0px 1px 3px var(--color-grey-5);
   position: fixed;
   z-index: 12;
   background-color: var(--color-grey-10);
