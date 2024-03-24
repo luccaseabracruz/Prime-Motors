@@ -160,7 +160,7 @@ export const StyledMain = styled.main<ProfileProps>`
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 800px) {
     div.listAndFilter {
       display: flex;
       justify-content: space-between;
@@ -201,12 +201,11 @@ export const StyledMain = styled.main<ProfileProps>`
       margin: 0 auto;
     }
   }
-  @media (min-width: 1024px) {
+
+  @media (min-width: 1200px) {
+    padding: 0 0 1.2rem 0;
     ul.carsList {
       grid-template-columns: repeat(4, 1fr);
     }
-  }
-  @media (min-width: 1200px) {
-    padding: 0 0 1.2rem 0;
   }
 `;
