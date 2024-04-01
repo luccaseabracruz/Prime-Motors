@@ -72,9 +72,9 @@ export const CarProvider = ({ children }: IDefaultProviderProps) => {
   const [carYears, setCarYears] = useState([] as string[]);
   const [carFuelTypes, setCarFuelTypes] = useState([] as string[]);
   const [carMinKm, setCarMinKm] = useState(0);
-  const [carMaxKm, setCarMaxKm] = useState(0);
+  const [carMaxKm, setCarMaxKm] = useState(Math.pow(10, 10));
   const [carMinPrice, setCarMinPrice] = useState(0);
-  const [carMaxPrice, setCarMaxPrice] = useState(0);
+  const [carMaxPrice, setCarMaxPrice] = useState(Math.pow(10, 10));
   const [filteredCars, setFilteredCars] = useState([] as ICar[]);
   const [filterCar, setfilterCar] = useState('');
   const [isFilterActive, setIsFilterActive] = useState(false);
@@ -115,13 +115,6 @@ export const CarProvider = ({ children }: IDefaultProviderProps) => {
     return uniqueValues;
   };
 
-  const getSortedNumArray = (attrName: string): number[] => {
-    const values = findValues(attrName);
-    const sortedValues = values.map((str) => Number(str)).sort((a, b) => a - b);
-
-    return sortedValues;
-  };
-
   const getCars = async () => {
     try {
       const cars = await api.get<ICar[]>('/cars');
@@ -156,19 +149,7 @@ export const CarProvider = ({ children }: IDefaultProviderProps) => {
     setCarColors(findValues('color'));
     setCarYears(findValues('year'));
     setCarFuelTypes(findValues('fuel_type'));
-    setCarMinKm(getSortedNumArray('kilometrage')[0]);
-    setCarMaxKm(
-      getSortedNumArray('kilometrage')[
-        getSortedNumArray('kilometrage').length - 1
-      ]
-    );
-    setCarMinPrice(getSortedNumArray('price')[0]);
-    setCarMaxPrice(
-      getSortedNumArray('price')[getSortedNumArray('price').length - 1]
-    );
   }, [allCars, filteredCars]);
-
-  useEffect(() => {}, [allCars]);
 
   const token = localStorage.getItem('@TOKEN') || null;
 
