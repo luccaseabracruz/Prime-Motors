@@ -5,9 +5,9 @@ import { StyledMain } from './style';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useState } from 'react';
 import { useCar, useLayout, useModal } from '../../hooks';
-import InputRange from '../../components/InputRange';
 import GenericModal from '../../components/Modal/ModalGeneric';
 import PaginationComponent from '../../components/Pagination';
+import RangeFilter from '../../components/RangeFilter';
 
 export const HomePage = () => {
   const { windowWidth } = useLayout();
@@ -17,14 +17,14 @@ export const HomePage = () => {
     carColors,
     carYears,
     carFuelTypes,
-    carMinKm,
-    carMaxKm,
-    carMinPrice,
-    carMaxPrice,
     setfilterCar,
     setFilteredCars,
     isFilterActive,
     setIsFilterActive,
+    carMaxKm,
+    carMinKm,
+    carMinPrice,
+    carMaxPrice,
     setCarMaxKm,
     setCarMaxPrice,
     setCarMinKm,
@@ -34,12 +34,12 @@ export const HomePage = () => {
 
   const [showFilters, setShowFilters] = useState(false);
 
-  const handleBrandClick = (filter: string) => {
+  const handleFilterClick = (filter: string) => {
     setfilterCar(filter);
     setIsFilterActive(true);
   };
 
-  const handleClearBrand = () => {
+  const handleClearFilter = () => {
     setfilterCar('');
     setFilteredCars([]);
 
@@ -89,7 +89,7 @@ export const HomePage = () => {
                   <p
                     className='attributeOption'
                     key={brand}
-                    onClick={() => handleBrandClick(brand)}
+                    onClick={() => handleFilterClick(brand)}
                   >
                     {brand}
                   </p>
@@ -101,7 +101,7 @@ export const HomePage = () => {
                   <p
                     className='attributeOption'
                     key={model}
-                    onClick={() => handleBrandClick(model)}
+                    onClick={() => handleFilterClick(model)}
                   >
                     {model}
                   </p>
@@ -113,7 +113,7 @@ export const HomePage = () => {
                   <p
                     className='attributeOption'
                     key={color}
-                    onClick={() => handleBrandClick(color)}
+                    onClick={() => handleFilterClick(color)}
                   >
                     {color}
                   </p>
@@ -125,7 +125,7 @@ export const HomePage = () => {
                   <p
                     className='attributeOption'
                     key={year}
-                    onClick={() => handleBrandClick(year)}
+                    onClick={() => handleFilterClick(year)}
                   >
                     {year}
                   </p>
@@ -137,37 +137,37 @@ export const HomePage = () => {
                   <p
                     className='attributeOption'
                     key={fuelType}
-                    onClick={() => handleBrandClick(fuelType)}
+                    onClick={() => handleFilterClick(fuelType)}
                   >
                     {fuelType}
                   </p>
                 ))}
               </div>
 
-              <InputRange
-                title={'Km'}
-                minValue={carMinKm}
-                maxValue={carMaxKm}
-                setMinValue={setCarMinKm}
-                setMaxValue={setCarMaxKm}
+              <RangeFilter
+                title='Quilometros Rodados'
+                setStateMinValue={setCarMinKm}
+                setStateMaxValue={setCarMaxKm}
                 setIsFilterActive={setIsFilterActive}
+                stateMinValue={carMinKm}
+                stateMaxValue={carMaxKm}
                 isFilterActive={isFilterActive}
               />
-              <InputRange
-                isFilterActive={isFilterActive}
-                price={true}
-                title={'Preco'}
-                minValue={carMinPrice}
-                maxValue={carMaxPrice}
-                setMinValue={setCarMinPrice}
-                setMaxValue={setCarMaxPrice}
+              <RangeFilter
+                title='Preço'
+                setStateMinValue={setCarMinPrice}
+                setStateMaxValue={setCarMaxPrice}
                 setIsFilterActive={setIsFilterActive}
+                stateMinValue={carMinPrice}
+                stateMaxValue={carMaxPrice}
+                isFilterActive={isFilterActive}
               />
+
               {isFilterActive && (
                 <div className='filterButton__container'>
                   <button
                     className='filterBtn buttons-style-button-size-big'
-                    onClick={handleClearBrand}
+                    onClick={handleClearFilter}
                   >
                     Limpar filtros
                   </button>
